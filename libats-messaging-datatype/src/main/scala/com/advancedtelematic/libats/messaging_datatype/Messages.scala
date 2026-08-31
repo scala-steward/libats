@@ -183,5 +183,5 @@ object Messages {
 
   implicit val ecuReplacementMsgLike: com.advancedtelematic.libats.messaging_datatype.MessageLike[com.advancedtelematic.libats.messaging_datatype.Messages.EcuReplacement] = MessageLike[EcuReplacement](_.deviceUuid.show)
 
-  implicit val deviceMetricsObservationMessageLike: com.advancedtelematic.libats.messaging_datatype.MessageLike[com.advancedtelematic.libats.messaging_datatype.Messages.DeviceMetricsObservation] = MessageLike.derive[DeviceMetricsObservation](_.namespace.get)
+  implicit val deviceMetricsObservationMessageLike: com.advancedtelematic.libats.messaging_datatype.MessageLike[com.advancedtelematic.libats.messaging_datatype.Messages.DeviceMetricsObservation] = MessageLike.derive[DeviceMetricsObservation](_.uuid.uuid.toString)
 }
