@@ -13,7 +13,6 @@ import com.advancedtelematic.libats.data.DataType.{
 import DataType.UpdateType.UpdateType
 import DataType.*
 import Messages.{
-  CampaignLaunched,
   DeviceEventMessage,
   DeviceSystemInfoChanged,
   DeviceUpdateAssigned,
@@ -62,7 +61,6 @@ object MessageCodecs {
   implicit val deviceUpdateCompletedCodec: Codec[DeviceUpdateCompleted] =
     deriveCodec
   implicit val userCreatedCodec: Codec[UserCreated] = deriveCodec
-  implicit val campaignLaunchedCodec: Codec[CampaignLaunched] = deriveCodec
   implicit val packageIdCodec: Codec[PackageId] = deriveCodec
   implicit val resultCodeEncoder: Encoder[ResultCode] =
     Encoder.encodeString.contramap(_.value)
